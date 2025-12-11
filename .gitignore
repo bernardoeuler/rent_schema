@@ -1,0 +1,79 @@
+# =======================
+#   PYTHON
+# =======================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+
+# Arquivos de ambiente virtual
+venv/
+env/
+.venv/
+.env/
+
+# Caches
+*.cache
+.cache/
+pip-wheel-metadata/
+*.egg-info/
+*.egg
+
+# =======================
+#   EDITORES / IDEs
+# =======================
+# VS Code
+.vscode/
+.code-workspace
+
+# PyCharm
+.idea/
+
+# =======================
+#   SISTEMA OPERACIONAL
+# =======================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# =======================
+#   LOGS / TEMPORÁRIOS
+# =======================
+*.log
+logs/
+tmp/
+temp/
+
+# =======================
+#   CONFIGURAÇÕES SENSÍVEIS
+# =======================
+# Arquivo com credenciais do banco
+app/config/database.ini
+
+# Variáveis de ambiente
+.env
+*.env
+
+# =======================
+#   GERADOS PELO PROJETO
+# =======================
+# Arquivos de build ou distribuição
+dist/
+build/
+*.spec
+
+# =======================
+#   BACKUPS / EXPORTS
+# =======================
+*.bak
+*.old
+*.tmp
