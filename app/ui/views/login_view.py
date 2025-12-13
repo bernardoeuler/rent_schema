@@ -1,20 +1,19 @@
-# src/views/register_view.py
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+from app.ui.controllers.register_controller import RegisterController
 
-class RegisterView:
-  def __init__(self, root, controller):
+class LoginView:
+  def __init__(self, root, go_to_dashboard):
     self.root = root
-    self.controller = controller
-    self.controller.set_view(self)
+    self.go_to_dashboard = go_to_dashboard
 
-    root.title("Registro - Aluguel de Carros")
+    root.title("Login - Aluguel de Carros")
     root.geometry("400x380")
     root.resizable(False, False)
 
     self.build_ui()
-
+  
   def build_ui(self):
     style = ttk.Style()
     style.configure('Green.TButton',  background="#4CAF50", foreground="white")
@@ -42,40 +41,12 @@ class RegisterView:
 
     ttk.Button(
       frame, text="Registrar", style='Green.TButton',
-      width=20, command=self.on_register_click
+      width=20
     ).pack(pady=15)
 
     ttk.Button(
-      frame, text="Já tenho conta → Login",
-      command=self.on_login_click
+      frame, text="Não tenho conta → Registrar"
     ).pack()
-
-  def get_nome(self):
-    return self.entry_nome.get().strip()
   
-  def get_email(self):
-    return self.entry_email.get().strip()
-    
-  def get_senha(self):
-    return self.entry_senha.get()
-    
-  def get_confirm(self):
-    return self.entry_confirm.get()
-
-  def on_login_click(self):
-    self.controller.go_to_login()
-
-  def on_register_click(self):
-    self.controller.register()
-
-  def destroy_window(self):
-    self.window.destroy()
-
-  def show_info(self, msg_title: str, message: str):
-    messagebox.showinfo(msg_title, message)
-  
-  def show_error(self, msg_title: str, message: str):
-    messagebox.showerror(msg_title, message)
-    
-  def show_warning(self, msg_title: str, message: str):
-    messagebox.showwarning(msg_title, message)
+  """ def on_login_click():
+     """
