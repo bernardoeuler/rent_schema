@@ -1,7 +1,7 @@
 # 🚗 Sistema de Aluguel de Carros: RentSchema
 
 Este projeto é um sistema de gerenciamento e aluguel de carros, desenvolvido em **Python**, com interface gráfica usando **Tkinter**, seguindo uma arquitetura limpa e modular.  
-A persistência dos dados é feita em **MariaDB**, utilizando uma camada de acesso isolada para maior segurança e organização.
+A persistência dos dados é feita em **MariaDB**.
 
 ---
 
@@ -11,12 +11,14 @@ A persistência dos dados é feita em **MariaDB**, utilizando uma camada de aces
 rent_schema/
 │
 ├── app/
-│ ├── main.py
-│ ├── ui/ # Interface Tkinter (views, controllers, tema)
+│ ├── config/ # Configurações
+│ ├── controllers/ # Controladores (parte do MVC)
 │ ├── core/ # Regras de negócio / serviços
 │ ├── database/ # Conexão e consultas ao MariaDB
+│ ├── main.py # Arquivo inicial do projeto
+│ ├── models/ # Modelos (parte do MVC)
 │ ├── utils/ # Funções auxiliares
-│ └── config/ # Configurações
+│ └── views/ # Visualizações (parte do MVC)
 │
 ├── requirements.txt # Dependências do projeto
 ├── README.md # Documentação do projeto

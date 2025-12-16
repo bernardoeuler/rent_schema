@@ -1,5 +1,8 @@
 from database.connection import DatabaseConnection
 
+# É correto 'tentar' criar as tabelas em cada execução?
+# CPF null (O usuário vai inserir os dados quando for alugar)
+
 def create_tables():
   conn = DatabaseConnection.get_connection()
   cursor = conn.cursor()
