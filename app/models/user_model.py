@@ -1,5 +1,5 @@
 # src/models/user_model.py
-from database.connection import DatabaseConnection
+from ..database.connection import DatabaseConnection
 
 class UserModel:
   def __init__(self):
@@ -26,3 +26,11 @@ class UserModel:
     cursor.close()
     conn.close()
     return result is not None
+
+  def update_user(self, cpf: str, field: str, value: str | int | float):
+    conn = DatabaseConnection.get_connection()
+    cursor = conn.cursor()
+    cursor.execute(f"UPDATE Cliente SET {field} = ? WHERE cpf = ?", (value,cpf))
+    conn.commit()
+    cursor.close()
+    conn.close()
